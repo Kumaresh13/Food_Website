@@ -1,0 +1,90 @@
+{% extends 'base.html'%}
+
+{% block title %}
+<title>Menu</title>
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-3">Indian</h1>
+<div class="row">
+    {% for item in cat1 %}
+    <div class="col-md-3">
+        <img src="{{ item.image.url }}" style="height: 10rem" class="card-img-top" alt="...">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"  >{{ item.title }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+                <blockquote class="blockquote mb-0">
+                    <footer class="blockquote-footer">Rs {{ item.price }}</footer>
+                </blockquote>
+                <br>
+                <a href="{{ item.get_add_to_cart_url }}" class="btn btn-primary float-right">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br>
+<h1 class="mb-3">Italian</h1>
+<div class="row">
+    {% for item in cat2 %}
+    <div class="col-md-3">
+        <img src="{{ item.image.url }}" style="height: 10rem" class="card-img-top" alt="...">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+                <blockquote class="blockquote mb-0">
+                    <footer class="blockquote-footer">Rs {{ item.price }}</footer>
+                </blockquote>
+                <br>
+                <a href="{{ item.get_add_to_cart_url }}" class="btn btn-primary float-right">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br>
+<h1 class="mb-3">American</h1>
+<div class="row">
+    {% for item in cat3 %}
+    <div class="col-md-3">
+        <img src="{{ item.image.url }}" style="height: 10rem" class="card-img-top" alt="...">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+                <blockquote class="blockquote mb-0">
+                    <footer class="blockquote-footer">Rs {{ item.price }}</footer>
+                </blockquote>
+                <br>
+                <a href="{{ item.get_add_to_cart_url }}" class="btn btn-primary float-right">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br>
+<h1 class="mb-3">Desserts</h1>
+<div class="row">
+    {% for item in cat4 %}
+    <div class="col-md-3">
+        <img src="{{ item.image.url }}" style="height: 10rem" class="card-img-top" alt="...">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+                <blockquote class="blockquote mb-0">
+                    <footer class="blockquote-footer">Rs {{ item.price }} per piece</footer>
+                </blockquote>
+                <br>
+                <a href="{{ item.get_add_to_cart_url }}" class="btn btn-primary float-right">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock content %}

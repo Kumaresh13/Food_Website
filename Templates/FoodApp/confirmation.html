@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Confirmation</title>
+{% endblock %}
+
+{% block content %}
+    {% if object %}
+        <h2>Your order is waiting for approval</h2>
+    {% else %}
+        <h2>Your order is being delivered.</h2>
+        <h2>Please wait for {{ time }} min</h2>
+    {% endif %}
+{% endblock %}
